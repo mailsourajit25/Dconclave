@@ -2,7 +2,19 @@
     pageEncoding="UTF-8"%>
 <%@include file="nav.jsp" %>
 <div class="ui container" style="margin-top:50px;">
-<form class="ui form" method="post" action="register_submit.jsp" id="form1">
+<%if(request.getAttribute("reg_code")=="340ad75b-388e-4d80-b148-eb48672be293")
+{
+	%>
+	<div class="ui success message">
+  <i class="close icon"></i>
+  <div class="header">
+    Your user registration was successful.
+  </div>
+  <p>You may now log-in to continue</p>
+</div>
+	<%}
+	%>
+<form class="ui form" method="post" action="register_submit" id="form1">
   <h3 class="ui dividing header">Registration Form</h3>
   <div class="field">
     <label>Name</label>
@@ -317,5 +329,5 @@
   <div class="ui error message"></div>
 </form>
 </div>
-<script src="js/register.js">
+<script src="js/register.js"></script>
 <%@include file="footer.jsp" %>

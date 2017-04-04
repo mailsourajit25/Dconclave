@@ -26,17 +26,19 @@ public class register_submit extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String fname=request.getParameter("firstname");
-		String lname=request.getParameter("lastname");
-		String country=request.getParameter("country");
-		String email=request.getParameter("email");
-		String pass1=request.getParameter("pass");
-		
-		String sex=request.getParameter("gender");
-		
-		String sql="insert into USERS values('"+email+"','"+fname+"','"+lname+"','"+country+"','"+sex+"','"+pass1+"','','0','0','0')";
-		//out.print(sql);
-		StmtUpdate s=new StmtUpdate(sql);
+//		String fname=request.getParameter("firstname");
+//		String lname=request.getParameter("lastname");
+//		String country=request.getParameter("country");
+//		String email=request.getParameter("email");
+//		String pass1=request.getParameter("pass");
+//		
+//		String sex=request.getParameter("gender");
+//		
+//		String sql="insert into USERS values('"+email+"','"+fname+"','"+lname+"','"+country+"','"+sex+"','"+pass1+"','','0','0','0')";
+//		
+//		StmtQ s=new StmtQ(sql);
+//		s.update();
+		response.setHeader("Location", "register.jsp?reg_code=340ad75b-388e-4d80-b148-eb48672be293");
 	}
 
 }

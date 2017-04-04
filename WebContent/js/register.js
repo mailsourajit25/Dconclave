@@ -1,4 +1,4 @@
-document.ready(function(){
+
 	$('#country')
 	.dropdown()
 	;
@@ -113,4 +113,3 @@ document.ready(function(){
 		});
 	}
 	
-});

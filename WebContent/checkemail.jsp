@@ -4,9 +4,10 @@
 <%
 String e=request.getParameter("email");
 if(IsValidEmail.validate(e)){
-StmtQuery s=new StmtQuery();
-String sql="select * from USERS where email='"+e+"'";
-if(s.isExist(sql)){
+	String sql="select * from USERS where email='"+e+"'";
+	StmtQ s=new StmtQ(sql);
+
+if(s.isExist()){
 	out.print("Exists");
 	
 }else{
