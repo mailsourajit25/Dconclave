@@ -2,18 +2,21 @@
     pageEncoding="UTF-8"%>
 <%@include file="nav.jsp" %>
 <div class="ui container" style="margin-top:50px;">
-<%if(request.getAttribute("reg_code")=="340ad75b-388e-4d80-b148-eb48672be293")
+<% String regcode=(String)request.getParameter("reg_code");
+if(regcode.equals("340ad75b-388e-4d80-b148-eb48672be293"))
 {
 	%>
+	
 	<div class="ui success message">
   <i class="close icon"></i>
   <div class="header">
-    Your user registration was successful.
+    Registration was successful.
   </div>
   <p>You may now log-in to continue</p>
 </div>
 	<%}
 	%>
+	
 <form class="ui form" method="post" action="register_submit" id="form1">
   <h3 class="ui dividing header">Registration Form</h3>
   <div class="field">
@@ -300,7 +303,7 @@
     <label>Email</label>
     
     <input type="text" name="email" placeholder="Enter your email" onBlur="checkEmail(this.value)" id="email" >
-    <p id="email_er_por"></p>
+    <p id="email_status"></p>
     </div>
  
  	<div class="field">

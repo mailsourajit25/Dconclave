@@ -101,10 +101,10 @@
 		
 				function(data,status){
 			if(data.trim()=="Exists"){
-			$("#email_er_por").html('<span style="color:red">Email Already Exists</span>');
+			$("#email_status").html('<span style="color:red">Email Already Exists</span>');
 			$("#register").attr('disabled','disabled');
 			}else if(data.trim()=="valid"){
-				$("#email_er_por").html('<span style="color:green">Email is Valid</span>');
+				$("#email_status").html('<span style="color:green">Email is Valid</span>');
 				$("#register").removeAttr('disabled');
 			}
 			
@@ -112,4 +112,22 @@
 			
 		});
 	}
+	
+function checkloginEmail(a){
+		
+		$.post('checkemail.jsp',{
+			email:a
+		},
+		
+				function(data,status){
+			if(data.trim()=="Exists"){
+			$("#email_status").html('<span style="color:red">Email Already Exists</span>');
+			$("#login_submit").attr('disabled','disabled');
+			}
+			
+			
+			
+		});
+	}
+	
 	
