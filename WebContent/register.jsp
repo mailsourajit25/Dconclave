@@ -2,9 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@include file="nav.jsp" %>
 <div class="ui container" style="margin-top:50px;">
-<% String regcode=(String)request.getParameter("reg_code");
-if(regcode.equals("340ad75b-388e-4d80-b148-eb48672be293"))
-{
+<%
+if(request.getParameter("reg_code")!=null){
+	String regcode=(String)request.getParameter("reg_code");
+	if(regcode.equals("340ad75b-388e-4d80-b148-eb48672be293"))
+	{	
+
 	%>
 	
 	<div class="ui success message">
@@ -15,6 +18,7 @@ if(regcode.equals("340ad75b-388e-4d80-b148-eb48672be293"))
   <p>You may now log-in to continue</p>
 </div>
 	<%}
+}
 	%>
 	
 <form class="ui form" method="post" action="register_submit" id="form1">
