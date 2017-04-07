@@ -13,12 +13,12 @@ public class StmtQ {
 		con=c.Con();
 	}
 	
-	public void update()
+	public void update()//For insert ,update and delete sql instructions 
 	{
-	
+	int r=0;
 	try {
 		Statement s=con.createStatement();
-		int r=s.executeUpdate(sql);
+		r=s.executeUpdate(sql);
 		con.close();
 	} catch (SQLException e) {
 		e.printStackTrace();
@@ -28,16 +28,16 @@ public class StmtQ {
 	
 	}
 	
-	public ResultSet retriveData(){
+	public ResultSet retrieveData(){
 		ResultSet r = null;
 		try {
 			Statement s=con.createStatement();
 			r=s.executeQuery(sql);
-			con.close();
+			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			System.out.println(e.toString());
 		}
+		
 		return r;
 	}
 	
@@ -49,7 +49,7 @@ public class StmtQ {
 			b=result.next();
 			con.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			System.out.println(e.toString());
 		}	
 		return b;
