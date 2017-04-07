@@ -13,45 +13,37 @@ public class StmtQ {
 		con=c.Con();
 	}
 	
-	public void update()
+	public int update() throws SQLException
 	{
+	int r=0;
 	
-	try {
 		Statement s=con.createStatement();
-		int r=s.executeUpdate(sql);
+		r=s.executeUpdate(sql);
 		con.close();
-	} catch (SQLException e) {
-		e.printStackTrace();
-	}
+	
 		
-	
+	return r;
 	
 	}
 	
-	public ResultSet retriveData(){
+	public ResultSet retriveData() throws SQLException{
 		ResultSet r = null;
-		try {
+		
 			Statement s=con.createStatement();
 			r=s.executeQuery(sql);
 			con.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			System.out.println(e.toString());
-		}
+		
 		return r;
 	}
 	
-	public boolean isExist(){
+	public boolean isExist() throws SQLException{
 		boolean b=false;
-		try {
+		
 			Statement s=con.createStatement();
 			ResultSet result=s.executeQuery(sql);
 			b=result.next();
 			con.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			System.out.println(e.toString());
-		}	
+			
 		return b;
 	}
 

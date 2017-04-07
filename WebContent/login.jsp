@@ -15,6 +15,24 @@
   
   <button class="ui button blue" id="login_submit">Login </button>
   </form>
+<script type="text/javascript">
+function checkloginEmail(a){
+	
+	$.post('checkemail.jsp',{
+		email:a
+	},
+	
+			function(data,status){
+		if(data.trim()=="Exists"){
+		$("#email_status").html('<span style="color:red">Email Already Exists</span>');
+		$("#login_submit").attr('disabled','disabled');
+		}
+		
+		
+		
+	});
+}
 
+</script>
 </div>
 <%@include file="footer.jsp" %>

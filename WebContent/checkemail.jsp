@@ -4,7 +4,7 @@
 <%
 String e=request.getParameter("email");
 if(IsValidEmail.validate(e)){
-	String sql="select * from USERS where email='"+e+"'";
+	String sql="select * from USERSd where email='"+e+"'";
 	StmtQ s=new StmtQ(sql);
 
 if(s.isExist()){

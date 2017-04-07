@@ -43,11 +43,11 @@
     <i class="wait icon"></i>
     Recent Questions
   </a>
-  <a class="item">
+  <a class="item" href="login.jsp">
     <i class="sign in icon"></i>
     Login
   </a>
-  <a class="item">
+  <a class="item" href="register.jsp">
     <i class="add user icon"></i>
     Register
   </a>

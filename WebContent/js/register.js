@@ -100,6 +100,7 @@
 		},
 		
 				function(data,status){
+			alert(status);
 			if(data.trim()=="Exists"){
 			$("#email_status").html('<span style="color:red">Email Already Exists</span>');
 			$("#register").attr('disabled','disabled');
@@ -120,6 +121,7 @@ function checkloginEmail(a){
 		},
 		
 				function(data,status){
+			
 			if(data.trim()=="Exists"){
 			$("#email_status").html('<span style="color:red">Email Already Exists</span>');
 			$("#login_submit").attr('disabled','disabled');

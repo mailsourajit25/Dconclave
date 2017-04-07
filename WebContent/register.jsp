@@ -10,14 +10,21 @@ if(request.getParameter("reg_code")!=null){
 
 	%>
 	
-	<div class="ui success message">
-  <i class="close icon"></i>
-  <div class="header">
+	<div class="ui success message green">
+  <i class="close icon" onclick='document.getElementById("reg_success").style.display = "none"'></i>
+  <div class="header" id="reg_success">
     Registration was successful.
   </div>
   <p>You may now log-in to continue</p>
 </div>
-	<%}
+	<%}else if(regcode.equals("340ad75b-388e-4d80-b148-eb48672be294")){
+		%> <div class="ui failed message red" id="reg_failed">
+  <i class="close icon" onclick='document.getElementById("reg_failed").style.display = "none"'></i>
+  <div class="header" >
+    <%=request.getParameter("err") %>
+  </div></div>
+	
+	<%  }
 }
 	%>
 	
