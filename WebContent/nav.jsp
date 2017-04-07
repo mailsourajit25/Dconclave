@@ -16,18 +16,6 @@
     <i class="home icon"></i>
     Home
   </a>
-  <a class="item">
-    <i class="block layout icon"></i>
-    Topics
-  </a>
-  <a class="item">
-    <i class="users icon"></i>
-    Popular Questions
-  </a>
-  <a class="item">
-    <i class="wait icon"></i>
-    Recent Questions
-  </a>
   <a class="item" href="login.jsp">
     <i class="sign in icon"></i>
     Login
