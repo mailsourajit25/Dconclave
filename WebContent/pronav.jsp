@@ -36,3 +36,7 @@
   <a class="right item" href="trending.jsp"><b>Trending</b></a>
   <a class="right item" href="logout.jsp"><b>Log out</b></a>
 </div>
+<%if(session.getAttribute("user")==null) 
+	response.sendRedirect("login.jsp");
+%>
+<jsp:useBean id="user" class="onlineForum.user" scope="session" />

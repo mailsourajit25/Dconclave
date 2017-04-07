@@ -1,8 +1,5 @@
 <%@include file="pronav.jsp" %>
-<%if(session.getAttribute("user")==null) 
-	response.sendRedirect("login.jsp");
-%>
-<jsp:useBean id="user" class="onlineForum.user" scope="session" />
+
 <div class="ui grid">
 <div class="row three">
 <div class="column">
@@ -25,7 +22,6 @@
   </div>
   <div class="content">
     <a class="header"><jsp:getProperty property="fname" name="user" /> &nbsp; &nbsp; <jsp:getProperty property="lname" name="user" /></a>
-
     <div class="description">
     	  Change Picture
     	 <% }%>
