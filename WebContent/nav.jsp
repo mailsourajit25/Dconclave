@@ -11,21 +11,6 @@
 <body>
 <script src="js/jquery3.1.1.min.js"></script>
 <script src="js/semantic.min.js"></script>
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
 <div class="ui left demo vertical inverted sidebar labeled icon menu ">
   <a class="item">
     <i class="home icon"></i>
@@ -43,11 +28,11 @@
     <i class="wait icon"></i>
     Recent Questions
   </a>
-  <a class="item">
+  <a class="item" href="login.jsp">
     <i class="sign in icon"></i>
     Login
   </a>
-  <a class="item">
+  <a class="item" href="register.jsp">
     <i class="add user icon"></i>
     Register
   </a>
@@ -60,7 +45,7 @@
         <div class="ui logo shape">
           <div class="sides">
             <div class="active ui side">
-              <img class="ui image" src="/images/logo.png">
+              <img class="ui tiny circular image" src="images/logo.png">
             </div>
           </div>
         </div>

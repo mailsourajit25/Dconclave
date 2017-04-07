@@ -43,15 +43,20 @@ public class loginsubmit extends HttpServlet {
 		try {
 			Statement s=con.createStatement();
 			r = s.executeQuery(query);
-			while (r.next()) {
-			    if(r.getRow()==0){
-			    	out.print("Hellow");
-			    	response.sendRedirect("login.jsp?pstatus=404");
-			    }else{
-			    	response.sendRedirect("profile.jsp");
-			    }
-			    	
+			if(!r.next()){//if no record is returned by the sql query then the value of r.next() is false
+				response.sendRedirect("login.jsp?pstatus=404");
+			}else{
+				response.sendRedirect("profile.jsp");
 			}
+			
+//			    if(r==null){
+//			    	out.print("Hellow");
+//			    	}
+//			    }else{
+//			    	
+//			    }
+			    	
+			
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 			out.println("Error"+e1.getMessage());

@@ -15,7 +15,14 @@ $('.ui.form')
 	  }
 	})
 	;
-
+$('.message .close')
+.on('click', function() {
+  $(this)
+    .closest('.message')
+    .transition('fade')
+  ;
+})
+;
 function checkloginEmail(a){
 		
 		$.post('checkemail.jsp',{

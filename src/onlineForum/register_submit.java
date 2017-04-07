@@ -1,6 +1,8 @@
 package onlineForum;
 
 import java.io.IOException;
+
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,12 +35,12 @@ public class register_submit extends HttpServlet {
 		String pass1=request.getParameter("pass");
 		
 		String sex=request.getParameter("gender");
-		
-		String sql="insert into USERS values('"+email+"','"+fname+"','"+lname+"','"+country+"','"+sex+"','"+pass1+"','','0','0','0')";
+		response.setContentType("text/html");
+		String sql="INSERT into USERS values('"+email+"','"+fname+"','"+lname+"','"+country+"','"+sex+"','"+pass1+"','','0','0','0')";
 		
 		StmtQ s=new StmtQ(sql);
 		s.update();
-		response.setContentType("test/html");
+		
 		response.sendRedirect("register.jsp?reg_code=340ad75b-388e-4d80-b148-eb48672be293");
 	}
 

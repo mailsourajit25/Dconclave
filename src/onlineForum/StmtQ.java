@@ -15,13 +15,14 @@ public class StmtQ {
 	
 	public void update()//For insert ,update and delete sql instructions 
 	{
-	int r=0;
+	
 	try {
 		Statement s=con.createStatement();
-		r=s.executeUpdate(sql);
+		s.executeUpdate(sql);
 		con.close();
 	} catch (SQLException e) {
 		e.printStackTrace();
+		
 	}
 		
 	

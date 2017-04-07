@@ -1,41 +1,20 @@
 
 <div class="ui inverted vertical footer segment" id="footer">
-    <div class="ui center aligned container">
-      <div class="ui stackable inverted divided grid">
-        <div class="three wide column">
-          <h4 class="ui inverted header">Group 1</h4>
-          <div class="ui inverted link list">
-            <a href="#" class="item">Link One</a>
-            <a href="#" class="item">Link Two</a>
-            <a href="#" class="item">Link Three</a>
-            <a href="#" class="item">Link Four</a>
-          </div>
+    <div class="ui centerered aligned container">
+      <div class="ui stackable inverted divided centered grid">
+      <div class="row">
+      <div class="column">
+      <h2>Welcome to Dconclave!</h2>
+      </div>
+      </div>
+      <div class="row">
+        <div class="column">
+        <h5>The place where all your queries get answered.</h5>
         </div>
-        <div class="three wide column">
-          <h4 class="ui inverted header">Group 2</h4>
-          <div class="ui inverted link list">
-            <a href="#" class="item">Link One</a>
-            <a href="#" class="item">Link Two</a>
-            <a href="#" class="item">Link Three</a>
-            <a href="#" class="item">Link Four</a>
-          </div>
-        </div>
-        <div class="three wide column">
-          <h4 class="ui inverted header">Group 3</h4>
-          <div class="ui inverted link list">
-            <a href="#" class="item">Link One</a>
-            <a href="#" class="item">Link Two</a>
-            <a href="#" class="item">Link Three</a>
-            <a href="#" class="item">Link Four</a>
-          </div>
-        </div>
-        <div class="seven wide column">
-          <h4 class="ui inverted header">OnlineForum</h4>
-          <p>Ask anything you want!</p>
         </div>
       </div>
       <div class="ui inverted section divider"></div>
-      <img src="http://localhost:9000/assets/images/yeoman.png" class="ui centered mini image">
+      <img src="images/logo.png" class="ui centered mini circular image">
       <div class="ui horizontal inverted small divided link list">
         <a class="item" href="#">Site Map</a>
         <a class="item" href="#">Contact Us</a>
