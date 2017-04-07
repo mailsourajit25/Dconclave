@@ -1,12 +1,44 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>User Profile</title>
-</head>
-<body>
+<%@include file="pronav.jsp" %>
+<%if(session.getAttribute("user")==null) 
+	response.sendRedirect("login.jsp");
+%>
+<jsp:useBean id="user" class="onlineForum.user" scope="session" />
+<div class="ui grid">
+<div class="row three">
+<div class="column">
+<div class="ui card">
+  <div class="image">
+  <%
+      if(user.getPic()==null){
+    	  %>
+    <img src="images/default.png">
+  </div>
+  <div class="content">
+    <a class="header"><jsp:getProperty property="fname" name="user" /><jsp:getProperty property="lname" name="user" /></a>
 
-</body>
-</html>
+    <div class="description">
+    	  Upload Picture
+    	  <%}
+    	  else{
+    	  %>
+    	  <img src="images/default1.png">
+  </div>
+  <div class="content">
+    <a class="header"><jsp:getProperty property="fname" name="user" /> &nbsp; &nbsp; <jsp:getProperty property="lname" name="user" /></a>
+
+    <div class="description">
+    	  Change Picture
+    	 <% }%>
+    </div>
+  </div>
+  
+  </div>
+</div>
+</div>
+<div class="column">
+</div>
+<div class="column">
+</div>
+</div>
+</div>
+<%@include file="profooter.jsp" %>

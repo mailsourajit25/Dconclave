@@ -1,16 +1,15 @@
 package onlineForum;
-
-public class user {
+public class user implements java.io.Serializable {
 	private String email;
 	private String fname;
 	private String lname;
 	private String country;
 	private String sex;
-	private String paswd;
+	
 	private String pic;
 	private int score;
-	private String NOQ;
-	private String NOA;
+	private int NOQ;
+	private int NOA;
 	public String getEmail() {
 		return email;
 	}
@@ -41,12 +40,7 @@ public class user {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	public String getPaswd() {
-		return paswd;
-	}
-	public void setPaswd(String paswd) {
-		this.paswd = paswd;
-	}
+	
 	public String getPic() {
 		return pic;
 	}
@@ -59,16 +53,16 @@ public class user {
 	public void setScore(int score) {
 		this.score = score;
 	}
-	public String getNOQ() {
+	public int getNOQ() {
 		return NOQ;
 	}
-	public void setNOQ(String nOQ) {
+	public void setNOQ(int nOQ) {
 		NOQ = nOQ;
 	}
-	public String getNOA() {
+	public int getNOA() {
 		return NOA;
 	}
-	public void setNOA(String nOA) {
+	public void setNOA(int nOA) {
 		NOA = nOA;
 	}
 	

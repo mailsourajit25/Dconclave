@@ -3,6 +3,11 @@
 <%@include file="nav.jsp" %>
 <div class="ui container" style="margin-top:50px;">
 <%
+//If session is set then this will take it back to profile page
+if(session.getAttribute("user")!=null){
+	response.sendRedirect("profile.jsp");
+}
+//if registered successfully then reg_code will be set
 if(request.getParameter("reg_code")!=null){
 	String regcode=(String)request.getParameter("reg_code");
 	if(regcode.equals("340ad75b-388e-4d80-b148-eb48672be293"))

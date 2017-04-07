@@ -37,7 +37,6 @@ public class register_submit extends HttpServlet {
 		String sex=request.getParameter("gender");
 		response.setContentType("text/html");
 		String sql="INSERT into USERS values('"+email+"','"+fname+"','"+lname+"','"+country+"','"+sex+"','"+pass1+"','','0','0','0')";
-		
 		StmtQ s=new StmtQ(sql);
 		s.update();
 		

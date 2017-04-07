@@ -3,7 +3,10 @@
 <div class="ui grid">
 <div class="two column row">
 <div class="column">
-<%
+<%//Session handler
+if(session.getAttribute("user")!=null){
+	response.sendRedirect("profile.jsp");
+}
 if(request.getParameter("pstatus")!=null){
 	String regcode=(String)request.getParameter("pstatus");
 	if(regcode.equals("404"))

@@ -68,5 +68,5 @@ $('.ui.labeled.icon.sidebar')
 .sidebar('hide')
 ;
 
-//$(".ui .sticky").sticky();
+
 </script>
