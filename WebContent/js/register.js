@@ -114,6 +114,7 @@
 		});
 	}
 	
+<<<<<<< HEAD
 function checkloginEmail(a){
 		
 		$.post('checkemail.jsp',{
@@ -131,5 +132,8 @@ function checkloginEmail(a){
 			
 		});
 	}
+=======
+
+>>>>>>> origin/master
 	
 	
