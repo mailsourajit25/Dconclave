@@ -1,5 +1,9 @@
 <%@include file="pronav.jsp" %>
+<% if(request.getSession(false)==null){
+	response.sendRedirect("login.jsp");}
 
+	%>
+<jsp:useBean id="user" class="onlineForum.user" scope="session" />
 <div class="ui grid">
 <div class="row three">
 <div class="column">

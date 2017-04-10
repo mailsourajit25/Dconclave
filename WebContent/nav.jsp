@@ -6,7 +6,7 @@
 <head>
 <link rel="stylesheet" href="css/semantic.min.css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Dconclave</title>
 </head>
 <body>
 <script src="js/jquery3.1.1.min.js"></script>
