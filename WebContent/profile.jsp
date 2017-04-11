@@ -1,44 +1,30 @@
 <%@include file="pronav.jsp" %>
-<% if(request.getSession(false)==null){
-	response.sendRedirect("login.jsp");}
 
-	%>
-<jsp:useBean id="user" class="onlineForum.user" scope="session" />
-<div class="ui grid">
-<div class="row three">
-<div class="column">
+<div class="ui grid" style="margin-top:20px;">
+
+<div class="column one wide"></div>
+<div class="column seven wide">
 <div class="ui card">
   <div class="image">
-  <%
-      if(user.getPic()==null){
-    	  %>
-    <img src="images/default.png">
+    <img src="images/default.png" height="100" width="100" >
   </div>
   <div class="content">
-    <a class="header"><jsp:getProperty property="fname" name="user" /><jsp:getProperty property="lname" name="user" /></a>
+    <a class="header"><jsp:getProperty property="fname" name="user" /><jsp:getProperty property="lname" name="user" /></a>   
+  </div>
+</div>
+</div>
+<div class="column six wide">
+<b>Country : </b><jsp:getProperty property="country" name="user" /><br>
+<b>Number of Answers :</b> <jsp:getProperty property="NOA" name="user" /><br>
+<b>Number of Questions Asked :</b> <jsp:getProperty property="NOQ" name="user" /><br>
+<b>User Score : </b><jsp:getProperty property="NOQ" name="user" />
+<br><br><button class="ui primary button">
+  Ask a Question
+</button>
+</div>
+<div class="column two wide">
 
-    <div class="description">
-    	  Upload Picture
-    	  <%}
-    	  else{
-    	  %>
-    	  <img src="images/default1.png">
-  </div>
-  <div class="content">
-    <a class="header"><jsp:getProperty property="fname" name="user" /> &nbsp; &nbsp; <jsp:getProperty property="lname" name="user" /></a>
-    <div class="description">
-    	  Change Picture
-    	 <% }%>
-    </div>
-  </div>
-  
-  </div>
 </div>
 </div>
-<div class="column">
-</div>
-<div class="column">
-</div>
-</div>
-</div>
+
 <%@include file="profooter.jsp" %>

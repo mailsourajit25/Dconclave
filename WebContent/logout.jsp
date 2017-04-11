@@ -9,9 +9,6 @@
 <body>
 <%
 session.invalidate();
-if(request.getSession(false)==null)
-	System.out.println("Its null finally");
-
 response.sendRedirect("login.jsp");
 %>>
 </body>

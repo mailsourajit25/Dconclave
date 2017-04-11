@@ -18,6 +18,10 @@
 	text-align:center;
 }
 
+.bucket{
+margin-top:20px;
+}
+
 </style>
 </head>
 <body>
@@ -36,10 +40,11 @@
   <a class="right item" href="trending.jsp"><b>Trending</b></a>
   <a class="right item" href="logout.jsp"><b>Log out</b></a>
 </div>
-<%
+<% /*if(request.getSession(false)==null){
+	response.sendRedirect("login.jsp");}
+System.out.println(request.getSession(false));*/
+	%>
+<jsp:useBean id="user" class="onlineForum.user" scope="session" />
 
 
-//System.out.println(request.getSession(false));
-
-	//response.sendRedirect("login.jsp");
-%>
+	
