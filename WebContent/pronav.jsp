@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-    <%@ page import="onlineForum.user" %>
+    <%@ page import="onlineForum.*,java.sql.*" %>
     
     <%@ taglib prefix="sql" 
            uri="http://java.sun.com/jsp/jstl/sql" %>
@@ -21,11 +21,20 @@
 	bottom:0;
 	width:100%;
 	text-align:center;
+	right: 0;
+  bottom: 0;
+  left: 0;
+	background-color:black;
+color:white;
+height:60px;
+padding-top:20px;
 }
 
-.bucket{
-margin-top:20px;
+body{
+position:relative;
 }
+
+
 
 </style>
 </head>
@@ -33,8 +42,8 @@ margin-top:20px;
 
 <div class="ui top nav inverted thin fixed menu" >
   <div class="left item">
-    <img class="ui mini circular image" style="border:2px solid white" src="images/logo.png">
-  </div>
+    <a href="profile.jsp"><img class="ui mini circular image" style="border:2px solid white" src="images/logo.png">
+  </a></div>
   <div class="left item">
     <div class="ui icon input" style="width:100%">
       <input type="text" placeholder="Search..." />

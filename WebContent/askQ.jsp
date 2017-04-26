@@ -1,6 +1,6 @@
 <%@include file="pronav.jsp"%>
 <div style="max-width:500px;margin:auto;margin-top:150px;">
-	<form class="ui form" method="post" action="ask_servlet.jsp" id="form1">
+	<form class="ui form" method="post" action="ask_question" id="form1">
   <h3 class="ui dividing header">Ask Anything</h3>
   <div class="field">
   <label>Title</label>
@@ -15,7 +15,18 @@
         <i class="dropdown icon"></i>
         <div class="default text">Select Topic</div>
         <div class="menu">
-    <div class="item" data-value="1">Topic1</div>
+        <%
+        Conn c=new Conn();
+        Connection con=c.Con();
+        PreparedStatement p=con.prepareStatement("Select TAG_NAME From TAGS ORDER BY T_ID");
+        ResultSet r=p.executeQuery();
+        while(r.next()){
+        	String tag=r.getString(1);%>
+        	<div class="item" data-value="<%=tag %>"><%=tag %></div>
+        	<% 
+        }
+        %>
+    
     </div>
     </div>
     </div>

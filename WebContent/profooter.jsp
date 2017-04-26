@@ -1,4 +1,4 @@
-<div class="ui  footer inverted  segment" id="footer">
+<div id="footer">
  
  <h4>&copy Copyright . Dconclave.Org</h4>
  

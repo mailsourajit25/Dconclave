@@ -13,12 +13,12 @@
   </div>
 </div>
 </div>
-<div class="column six wide"><%=" sessionId is " + session.getId()%><%=request.getSession(true).getAttribute("user").toString().isEmpty() %>
+<div class="column six wide"><%=" sessionId is " + session.getId()%><%=request.getSession(false).getAttribute("user").toString().isEmpty() %>
 <b>Country : </b><jsp:getProperty property="country" name="user" /><br>
 <b>Number of Answers :</b> <jsp:getProperty property="NOA" name="user" /><br>
 <b>Number of Questions Asked :</b> <jsp:getProperty property="NOQ" name="user" /><br>
 <b>User Score : </b><jsp:getProperty property="NOQ" name="user" />
-<br><br><button class="ui primary button">
+<br><br><button class="ui primary button" onclick="location.href='askQ.jsp'">
   Ask a Question
 </button>
 </div>
@@ -26,5 +26,4 @@
 
 </div>
 </div>
-
 <%@include file="profooter.jsp" %>

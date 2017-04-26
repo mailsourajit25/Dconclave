@@ -62,7 +62,7 @@ public class loginsubmit extends HttpServlet {
 					u.setPic(r.getString("PIC"));
 					
 				
-				HttpSession session=request.getSession();
+				HttpSession session=request.getSession(true);
 				session.setAttribute("user", u);
 				response.sendRedirect("profile.jsp");
 			}

@@ -1,8 +1,10 @@
 package onlineForum;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.*;
 public class StmtQ {
 	String sql="";
 	Conn c;
@@ -17,8 +19,8 @@ public class StmtQ {
 	{
 	
 	try {
-		Statement s=con.createStatement();
-		s.executeUpdate(sql);
+		PreparedStatement s=con.prepareStatement(sql);
+		s.executeUpdate();
 		con.close();
 	} catch (SQLException e) {
 		e.printStackTrace();
