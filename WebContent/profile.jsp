@@ -13,7 +13,7 @@
   </div>
 </div>
 </div>
-<div class="column six wide">
+<div class="column six wide"><%=" sessionId is " + session.getId()%><%=request.getSession(true).getAttribute("user").toString().isEmpty() %>
 <b>Country : </b><jsp:getProperty property="country" name="user" /><br>
 <b>Number of Answers :</b> <jsp:getProperty property="NOA" name="user" /><br>
 <b>Number of Questions Asked :</b> <jsp:getProperty property="NOQ" name="user" /><br>
