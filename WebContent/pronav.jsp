@@ -41,20 +41,24 @@ margin-top:60px;padding:20px;border-bottom:5px solid orange;width:100%;
 font-weight:bold;
 font-size:20px;
 }
+
 </style>
 </head>
 <body>
-
+<jsp:useBean id="user" class="onlineForum.user" scope="session" />
 <div class="ui top nav inverted thin fixed menu" >
   <div class="left item">
     <a href="profile.jsp"><img class="ui mini circular image" style="border:2px solid white" src="images/logo.png">
   </a></div>
+  
   <div class="left item">
+   
     <div class="ui icon input" style="width:100%">
       <input type="text" placeholder="Search..." />
       <i class="search icon"></i>
     </div>
     </div>
+  <span class=" right item"><b><jsp:getProperty property="fname" name="user" /></b></span> 
   <a class="right item" href="unanswered.jsp"><b>UnAnswered</b></a>
   <a class="right item" href="trending.jsp"><b>Trending</b></a>
   <a class="right item" href="logout.jsp"><b>Log out</b></a>
@@ -66,7 +70,7 @@ font-size:20px;
  
 <% //}%>
 
-<jsp:useBean id="user" class="onlineForum.user" scope="session" />
+
 
 
 	
