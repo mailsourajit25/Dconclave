@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-    <%@ page import="onlineForum.*,java.sql.*" %>
+    <%@ page import="onlineForum.*,java.sql.*,java.io.*, java.util.Date, java.util.Enumeration" %>
     
     <%@ taglib prefix="sql" 
            uri="http://java.sun.com/jsp/jstl/sql" %>
@@ -34,8 +34,13 @@ body{
 position:relative;
 }
 
-
-
+.box{
+margin-top:60px;padding:20px;border-bottom:5px solid orange;width:100%;
+}
+.upvotes{
+font-weight:bold;
+font-size:20px;
+}
 </style>
 </head>
 <body>

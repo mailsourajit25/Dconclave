@@ -59,6 +59,7 @@ public class ask_question extends HttpServlet {
 			s1=con.prepareStatement(Sql);
 			s1.setString(1, email);
 			s1.executeUpdate();
+			//retrieve the auto generated id
 			Sql="SELECT MAX(Q_ID) FROM QUESTIONS WHERE EMAIL=?";
 			s1=con.prepareStatement(Sql);
 			s1.setString(1, email);
