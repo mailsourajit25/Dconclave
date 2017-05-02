@@ -43,4 +43,5 @@
 </div>
 <script>
 $(".dropdown").dropdown();</script>
-<%@include file="profooter.jsp"%>
+</body>
+</html>

@@ -17,31 +17,43 @@
 <script src="js/semantic.min.js"></script>
 <style>
 #footer {
-	position: absolute;
-	bottom:0;
+	
 	width:100%;
 	text-align:center;
-	right: 0;
-  bottom: 0;
-  left: 0;
+	
 	background-color:black;
 color:white;
 height:60px;
-padding-top:20px;
-}
 
-body{
-position:relative;
 }
+#allans{
+overflow:hidden;
+float:right;
+}
+#allques{
+overflow:hidden;
+float:right;
 
+}
 .box{
-margin-top:60px;padding:20px;border-bottom:5px solid orange;width:100%;
+margin-top:60px;padding:20px;width:100%;border-bottom:2px solid orange;
 }
 .upvotes{
 font-weight:bold;
 font-size:20px;
 }
+.ansbox{
+width:100%;
 
+padding-bottom:2px;
+}
+.confluid{
+padding-left:3%;
+padding-right:3%;
+}
+#qdeco{
+border-bottom:5px solid orange;
+}
 </style>
 </head>
 <body>
@@ -64,11 +76,13 @@ font-size:20px;
   <a class="right item" href="logout.jsp"><b>Log out</b></a>
 </div>
 <% 
-//if(request.getSession(true).getAttribute("user").toString().isEmpty()){
-  %><%
- //}else{%>
+//if(request.getSession(false).getAttribute("user").toString().isEmpty()==false){
+//	response.sendRedirect("login.jsp");
+ // }
+
+
+ %>
  
-<% //}%>
 
 
 
