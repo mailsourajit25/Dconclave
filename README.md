@@ -10,7 +10,7 @@ A forum that shall entertain all your queries.
 ![Login Page](/screenshots/1.PNG?raw=true "Login Page")<br>
 ![Forum Page](/screenshots/Forum.PNG?raw=true "Forum Page")<br>
 ![Profile Page](/screenshots/profile.PNG?raw=true "Profile Page")<br>
-![Register Page](/screenshots/1.PNG?raw=true "Register Page")<br>
+![Register Page](/screenshots/register.PNG?raw=true "Register Page")<br>
 ![View Question Page](/screenshots/viewquestion.PNG?raw=true "View Question Page")<br>
 
 
