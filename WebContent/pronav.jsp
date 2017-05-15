@@ -2,11 +2,9 @@
     pageEncoding="ISO-8859-1"%>
     
     <%@ page import="onlineForum.*,java.sql.*,java.io.*, java.util.Date, java.util.Enumeration" %>
+  
     
-    <%@ taglib prefix="sql" 
-           uri="http://java.sun.com/jsp/jstl/sql" %>
-           <%@ taglib prefix="c" 
-           uri="http://java.sun.com/jsp/jstl/core" %>
+   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -66,13 +64,15 @@ border-bottom:5px solid orange;
   <div class="left item">
    
     <div class="ui icon input" style="width:100%">
-      <input type="text" placeholder="Search..." />
-      <i class="search icon"></i>
+    <form method="get" action="search.jsp">
+      <input name="query" type="text" placeholder="Search..." style="padding-right:50px;"/>
+      <button style="background:transparent;border:none;margin-left:-50px;">
+      <i class="search icon"></i></button>
+      </form>
     </div>
     </div>
   <span class=" right item"><b><jsp:getProperty property="fname" name="user" /></b></span> 
-  <a class="right item" href="unanswered.jsp"><b>UnAnswered</b></a>
-  <a class="right item" href="trending.jsp"><b>Trending</b></a>
+  <a class="right item" href="home.jsp"><b>Forum</b></a>
   <a class="right item" href="logout.jsp"><b>Log out</b></a>
 </div>
 <% 
@@ -83,8 +83,8 @@ border-bottom:5px solid orange;
 
  %>
  
+<div style="margin-top:50px;">&nbsp;</div>
 
 
 
 
-	

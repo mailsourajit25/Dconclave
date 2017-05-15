@@ -1,6 +1,7 @@
 package onlineForum;
 
 import java.io.IOException;
+import java.security.*;
 
 
 import javax.servlet.ServletException;
@@ -33,7 +34,7 @@ public class register_submit extends HttpServlet {
 		String country=request.getParameter("country");
 		String email=request.getParameter("email");
 		String pass1=request.getParameter("pass");
-		
+		//byte
 		String sex=request.getParameter("gender");
 		response.setContentType("text/html");
 		String sql="INSERT into USERS values('"+email+"','"+fname+"','"+lname+"','"+country+"','"+sex+"','"+pass1+"','','0','0','0')";
